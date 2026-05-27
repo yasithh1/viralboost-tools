@@ -2,7 +2,7 @@ const sections = [
   {
     id: 'about',
     title: 'About',
-    text: 'ViralBoost Tools is a free creator tools website made to help Facebook page owners, TikTok creators, YouTubers, Instagram creators, and small business owners create faster content ideas without logging in.',
+    text: 'ViralBoost Tools is a free content creation toolkit for creators, Facebook page owners, TikTok users, YouTubers, Instagram creators, and small businesses. It helps you generate Facebook engagement posts, captions, hashtag sets, thumbnail text ideas, and TikTok hooks without logging in.',
   },
   {
     id: 'privacy',

@@ -2,7 +2,7 @@ export const tools = {
   facebook: {
     name: 'Facebook Engagement Generator',
     emoji: '💬',
-    description: 'Generate quiz, vote, and comment-style posts for Facebook pages.',
+    description: 'Facebook Engagement Post Generator helps page owners create quiz posts, vote posts, and comment-style posts to increase engagement.',
     buttonText: 'Generate Post',
     copyText: 'Copy Post',
     items: [
@@ -160,7 +160,7 @@ Comment your answer.`,
   caption: {
     name: 'Caption Generator',
     emoji: '✍️',
-    description: 'Generate short, catchy captions for your posts and videos.',
+    description: 'Caption Generator helps creators write short captions for posts, reels, videos, product photos, and daily social media content.',
     buttonText: 'Generate Caption',
     copyText: 'Copy Caption',
     items: [
@@ -189,7 +189,7 @@ Comment your answer.`,
   hashtags: {
     name: 'Hashtag Generator',
     emoji: '#️⃣',
-    description: 'Generate hashtag sets for TikTok, Instagram, Facebook, and YouTube Shorts.',
+    description: 'Hashtag Generator creates ready hashtag sets for TikTok, Instagram, Facebook, and YouTube Shorts based on your content idea.',
     buttonText: 'Generate Hashtags',
     copyText: 'Copy Hashtags',
     items: [
@@ -218,7 +218,7 @@ Comment your answer.`,
   thumbnail: {
     name: 'Thumbnail Text Generator',
     emoji: '🎬',
-    description: 'Create bold text ideas for YouTube thumbnails and reels.',
+    description: 'Thumbnail Text Generator creates bold title ideas for YouTube thumbnails, reels covers, shorts, and Facebook videos.',
     buttonText: 'Generate Text',
     copyText: 'Copy Text',
     items: [
@@ -247,7 +247,7 @@ Comment your answer.`,
   hook: {
     name: 'TikTok Hook Generator',
     emoji: '⚡',
-    description: 'Generate scroll-stopping first lines for short videos.',
+    description: 'TikTok Hook Generator helps you write strong first lines for TikTok videos, reels, and YouTube Shorts.',
     buttonText: 'Generate Hook',
     copyText: 'Copy Hook',
     items: [

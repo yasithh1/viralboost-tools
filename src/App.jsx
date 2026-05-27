@@ -5,6 +5,7 @@ import ToolCard from './components/ToolCard'
 import Generator from './components/Generator'
 import ContactSection from './components/ContactSection'
 import InfoSections from './components/InfoSections'
+import SeoContent from './components/SeoContent'
 import Footer from './components/Footer'
 import { tools } from './data/toolData'
 
@@ -77,6 +78,7 @@ function App() {
         </section>
 
         <ContactSection />
+        <SeoContent />
         <InfoSections />
       </main>
       <Footer />
