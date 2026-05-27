@@ -8,7 +8,7 @@ function Hero() {
             One click. Better content. More engagement.
           </p>
           <h1 className="mt-6 max-w-3xl text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Create Better Social Media Posts in Seconds
+            Create Better Social Media Posts for Free in Seconds
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
             Free tools for creators to generate Facebook posts, captions,
