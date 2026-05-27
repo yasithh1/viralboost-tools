@@ -6,6 +6,9 @@ function Navbar() {
           ViralBoost <span className="text-yellow-300">Tools</span>
         </a>
         <div className="hidden items-center gap-6 text-sm font-medium text-slate-300 sm:flex">
+          <a className="transition hover:text-yellow-300" href="#about">
+            About
+          </a>
           <a className="transition hover:text-yellow-300" href="#tools">
             Tools
           </a>

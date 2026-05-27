@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import ToolCard from './components/ToolCard'
 import Generator from './components/Generator'
 import ContactSection from './components/ContactSection'
+import InfoSections from './components/InfoSections'
 import Footer from './components/Footer'
 import { tools } from './data/toolData'
 
@@ -22,6 +23,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <InfoSections />
 
         <section id="tools" className="px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
