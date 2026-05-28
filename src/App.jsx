@@ -5,8 +5,8 @@ import DesignServicesPage from './pages/DesignServicesPage'
 import GuidePage from './pages/GuidePage'
 import GuidesPage from './pages/GuidesPage'
 import HomePage from './pages/HomePage'
+import PortfolioPage from './pages/PortfolioPage'
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage'
-import ShareIdeaPage from './pages/ShareIdeaPage'
 import TermsPage from './pages/TermsPage'
 import ToolPage from './pages/ToolPage'
 import ToolsPage from './pages/ToolsPage'
@@ -21,7 +21,7 @@ function App() {
         <Route path="guides" element={<GuidesPage />} />
         <Route path="guides/:guideSlug" element={<GuidePage />} />
         <Route path="design-services" element={<DesignServicesPage />} />
-        <Route path="share-idea" element={<ShareIdeaPage />} />
+        <Route path="portfolio" element={<PortfolioPage />} />
         <Route path="contact" element={<ContactPage />} />
         <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="terms" element={<TermsPage />} />

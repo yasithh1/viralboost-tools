@@ -2,8 +2,8 @@ export const guides = [
   {
     slug: 'how-to-create-facebook-engagement-posts',
     title: 'How to Create Facebook Engagement Posts',
-    tool: '/tools/facebook-engagement-post-generator',
-    toolName: 'Facebook Engagement Post Generator',
+    tool: '/tools/facebook-engagement-idea-generator',
+    toolName: 'Facebook Engagement Idea Generator',
     intro: 'Facebook engagement posts work best when they make the reader answer quickly. A good post does not feel like homework. It feels like a simple question, a fun choice, or a small challenge.',
     sections: [
       ['Start with an easy action', 'Ask people to comment A or B, rate something from 1 to 10, finish a sentence, or choose between two options. Simple actions get more responses because people do not need to think too much before joining.'],
@@ -28,8 +28,8 @@ export const guides = [
   {
     slug: 'how-to-write-better-captions-for-reels',
     title: 'How to Write Better Captions for Reels',
-    tool: '/tools/caption-generator',
-    toolName: 'Caption Generator',
+    tool: '/tools/thumbnail-text-generator',
+    toolName: 'Thumbnail Text Generator',
     intro: 'A good caption supports the video. It gives context, adds emotion, and tells the viewer what to do next without making the post feel heavy.',
     sections: [
       ['Keep the message focused', 'One caption should usually support one main idea. If your reel is about gym motivation, the caption should not jump into business, travel, and lifestyle at the same time.'],
@@ -41,8 +41,8 @@ export const guides = [
   {
     slug: 'best-hashtags-for-content-creators',
     title: 'Best Hashtags for Content Creators',
-    tool: '/tools/hashtag-generator',
-    toolName: 'Hashtag Generator',
+    tool: '/tools/hashtag-set-generator',
+    toolName: 'Hashtag Set Generator',
     intro: 'Hashtags help organize content and give platforms extra context. They are not magic, but they can support reach when they match the topic and audience.',
     sections: [
       ['Mix niche and broad tags', 'Use a few topic-specific hashtags and a few broader creator tags. For example, a fitness post can use #gymtips, #fitnessmotivation, #workoutlife, and #contentcreator.'],
@@ -67,8 +67,8 @@ export const guides = [
   {
     slug: 'how-to-reply-to-customer-comments',
     title: 'How to Reply to Customer Comments',
-    tool: '/tools/comment-reply-generator',
-    toolName: 'Comment Reply Generator',
+    tool: '/contact',
+    toolName: 'Contact Page',
     intro: 'Fast and polite replies help small businesses build trust. The goal is to answer clearly, move serious buyers to DM, and keep the public comment section professional.',
     sections: [
       ['Reply based on intent', 'A price question needs a different reply than a positive comment. Interested customers need guidance. Negative comments need calm support. Match the reply to the comment type.'],
@@ -80,8 +80,8 @@ export const guides = [
   {
     slug: 'how-to-create-content-faster',
     title: 'How to Create Content Faster',
-    tool: '/tools/content-pack-generator',
-    toolName: 'Content Pack Generator',
+    tool: '/tools',
+    toolName: 'Free Tools',
     intro: 'Creating content faster does not mean creating careless content. It means using repeatable systems so you spend less time staring at a blank screen.',
     sections: [
       ['Start with one idea', 'Pick a topic like gym motivation, phone tips, cake business, or AI tools. Turn that one idea into a caption, hook, Facebook post, thumbnail text, hashtags, and CTA.'],

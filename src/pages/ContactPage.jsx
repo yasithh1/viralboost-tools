@@ -7,7 +7,7 @@ function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Contact ViralBoost Tools"
-        text="Send your custom content, editing, design, or creator tool request. Your email is used only to reply to your message."
+        text="Order a custom thumbnail, Facebook post design, TikTok cover, or creator content design package."
       />
       <ContactSection />
     </>

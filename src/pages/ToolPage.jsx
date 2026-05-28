@@ -18,14 +18,14 @@ function ToolPage() {
           <ToolRunner tool={tool} />
         </div>
       </section>
-      <section className="bg-slate-900 px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl rounded-lg border border-slate-800 bg-slate-950 p-6">
+      <section className="px-4 py-12 sm:px-6 lg:px-8">
+        <div className="glass-card mx-auto max-w-4xl rounded-[1.5rem] p-6">
           <h2 className="text-2xl font-black text-white">About this tool</h2>
-          <p className="mt-4 leading-7 text-slate-300">
+          <p className="mt-4 leading-7 text-lime-50/75">
             {tool.name} is a free template-based tool for creators and small
             business owners. It helps you move faster when you need practical
-            ideas for posts, short videos, replies, captions, selling messages,
-            and content planning. Keywords this page supports naturally include:
+            ideas for Facebook posts, short videos, thumbnail text, hashtags,
+            or design planning. Keywords this page supports naturally include:
             {' '}
             {tool.keywords}.
           </p>

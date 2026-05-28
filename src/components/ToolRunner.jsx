@@ -1,74 +1,20 @@
 import { useState } from 'react'
 import CopyButton from './CopyButton'
 import {
-  generateBios,
-  generateCaptions,
-  generateContentPack,
-  generateCtas,
   generateFacebookPost,
   generateHashtags,
   generateHook,
-  generateReplies,
   generateThumbnailPlan,
   generateThumbnailText,
 } from '../utils/generators'
 
-const captionStyles = ['Motivational', 'Funny', 'Professional', 'Short', 'Viral', 'Emotional']
-const replyTypes = [
-  'Price asking',
-  'Interested customer',
-  'Order asking',
-  'Availability question',
-  'Positive comment',
-  'Negative comment',
-  'Thank you reply',
-  'DM request',
-]
-const replyTones = ['Friendly', 'Professional', 'Short', 'Polite', 'Sales-focused']
-const bioTypes = [
-  'TikTok bio',
-  'Instagram bio',
-  'Facebook page bio',
-  'YouTube channel bio',
-  'Freelancer bio',
-  'Small business bio',
-]
+const categories = ['Fitness', 'Tech', 'Motivation', 'Business', 'Creator', 'Vlog', 'Food', 'Travel']
 const platforms = ['YouTube', 'Facebook', 'TikTok', 'Instagram']
-const niches = [
-  'Fitness',
-  'Tech',
-  'Motivation',
-  'Vlog',
-  'Business',
-  'Gaming',
-  'Education',
-  'AI Tools',
-  'Social Media Growth',
-]
-const thumbnailGoals = [
-  'Get clicks',
-  'Get comments',
-  'Promote service',
-  'Explain topic',
-  'Build brand',
-  'Make people curious',
-]
-const thumbnailStyles = ['Cinematic', 'Modern', 'Dark', 'Colorful', 'Minimal', 'Viral', 'Professional']
-
-function Field({ label, value, onChange, placeholder }) {
-  return (
-    <label className="block">
-      <span className="text-sm font-bold text-cyan-50">{label}</span>
-      <input
-        type="text"
-        value={value}
-        onChange={(event) => onChange(event.target.value)}
-        placeholder={placeholder}
-        className="glass-input mt-2 w-full rounded-xl px-4 py-3 outline-none transition placeholder:text-cyan-100/35"
-      />
-    </label>
-  )
-}
+const niches = ['Fitness', 'Tech', 'Motivation', 'Vlog', 'Business', 'Gaming', 'Education', 'AI Tools']
+const styles = ['Cinematic', 'Modern', 'Dark', 'Colorful', 'Minimal', 'Viral', 'Professional']
+const goals = ['Get clicks', 'Get comments', 'Promote service', 'Explain topic', 'Build brand']
+const whatsAppLink =
+  'https://wa.me/947XXXXXXXX?text=Hi%20I%20want%20to%20order%20a%20design'
 
 function SelectField({ label, value, onChange, options }) {
   return (
@@ -119,56 +65,20 @@ function OutputObject({ output }) {
 }
 
 function ToolRunner({ tool }) {
-  const [topic, setTopic] = useState('')
-  const [captionStyle, setCaptionStyle] = useState(captionStyles[0])
-  const [replyType, setReplyType] = useState(replyTypes[0])
-  const [replyTone, setReplyTone] = useState(replyTones[0])
-  const [bioType, setBioType] = useState(bioTypes[0])
+  const [category, setCategory] = useState(categories[0])
   const [platform, setPlatform] = useState(platforms[0])
   const [niche, setNiche] = useState(niches[0])
-  const [thumbnailGoal, setThumbnailGoal] = useState(thumbnailGoals[0])
-  const [thumbnailStyle, setThumbnailStyle] = useState(thumbnailStyles[0])
-  const [error, setError] = useState('')
+  const [style, setStyle] = useState(styles[0])
+  const [goal, setGoal] = useState(goals[0])
   const [output, setOutput] = useState(null)
 
-  const requiresTopic = ![
-    'facebook-engagement-post-generator',
-    'comment-reply-generator',
-    'call-to-action-generator',
-    'thumbnail-idea-prompt-generator',
-  ].includes(tool.slug)
-
-  const ensureTopic = () => {
-    if (requiresTopic && !topic.trim()) {
-      setError('Please enter your idea first.')
-      setOutput(null)
-      return false
-    }
-    setError('')
-    return true
-  }
-
   const generate = () => {
-    if (!ensureTopic()) return
-
     const actions = {
-      'content-pack-generator': () => generateContentPack(topic),
-      'facebook-engagement-post-generator': () => generateFacebookPost(),
-      'caption-generator': () => generateCaptions(topic, captionStyle),
-      'tiktok-hook-generator': () => [generateHook(topic)],
-      'thumbnail-text-generator': () => [generateThumbnailText(topic)],
-      'hashtag-generator': () => generateHashtags(topic),
-      'comment-reply-generator': () => generateReplies(replyType, replyTone),
-      'bio-generator': () => generateBios(bioType, topic),
-      'call-to-action-generator': () => generateCtas(),
-      'thumbnail-idea-prompt-generator': () =>
-        generateThumbnailPlan({
-          platform,
-          niche,
-          goal: thumbnailGoal,
-          style: thumbnailStyle,
-          topic,
-        }),
+      'facebook-engagement-idea-generator': () => [generateFacebookPost()],
+      'thumbnail-text-generator': () => [generateThumbnailText()],
+      'tiktok-hook-generator': () => [generateHook()],
+      'hashtag-set-generator': () => generateHashtags(category),
+      'thumbnail-design-planner': () => generateThumbnailPlan({ platform, niche, style, goal }),
     }
 
     setOutput(actions[tool.slug]())
@@ -177,103 +87,52 @@ function ToolRunner({ tool }) {
   return (
     <div className="glass-panel rounded-[2rem] p-5 sm:p-8">
       <div className="grid gap-4">
-        {requiresTopic && (
-          <Field
-            label="Your idea or topic"
-            value={topic}
-            onChange={setTopic}
-            placeholder="Example: gym motivation, cake business, phone speed tips"
-          />
+        {tool.slug === 'hashtag-set-generator' && (
+          <SelectField label="Category" value={category} onChange={setCategory} options={categories} />
         )}
-        {tool.slug === 'caption-generator' && (
-          <SelectField
-            label="Caption style"
-            value={captionStyle}
-            onChange={setCaptionStyle}
-            options={captionStyles}
-          />
-        )}
-        {tool.slug === 'comment-reply-generator' && (
+        {tool.slug === 'thumbnail-design-planner' && (
           <div className="grid gap-4 md:grid-cols-2">
-            <SelectField
-              label="Comment type"
-              value={replyType}
-              onChange={setReplyType}
-              options={replyTypes}
-            />
-            <SelectField label="Tone" value={replyTone} onChange={setReplyTone} options={replyTones} />
+            <SelectField label="Platform" value={platform} onChange={setPlatform} options={platforms} />
+            <SelectField label="Niche" value={niche} onChange={setNiche} options={niches} />
+            <SelectField label="Style" value={style} onChange={setStyle} options={styles} />
+            <SelectField label="Goal" value={goal} onChange={setGoal} options={goals} />
           </div>
         )}
-        {tool.slug === 'bio-generator' && (
-          <SelectField label="Bio type" value={bioType} onChange={setBioType} options={bioTypes} />
-        )}
-        {tool.slug === 'thumbnail-idea-prompt-generator' && (
-          <>
-            <div className="grid gap-4 md:grid-cols-2">
-              <SelectField label="Platform" value={platform} onChange={setPlatform} options={platforms} />
-              <SelectField label="Niche" value={niche} onChange={setNiche} options={niches} />
-              <SelectField
-                label="Goal"
-                value={thumbnailGoal}
-                onChange={setThumbnailGoal}
-                options={thumbnailGoals}
-              />
-              <SelectField
-                label="Style"
-                value={thumbnailStyle}
-                onChange={setThumbnailStyle}
-                options={thumbnailStyles}
-              />
-            </div>
-            <Field
-              label="Optional topic"
-              value={topic}
-              onChange={setTopic}
-              placeholder="Example: phone battery tips, gym transformation, AI tools for creators"
-            />
-          </>
+        {!['hashtag-set-generator', 'thumbnail-design-planner'].includes(tool.slug) && (
+          <div className="glass-card rounded-2xl p-5 text-center">
+            <p className="aqua-text text-sm font-black uppercase tracking-[0.18em]">No input needed</p>
+            <p className="mt-2 text-sm leading-6 text-lime-50/75">
+              Click Generate to get a random ready-to-copy result from preset templates.
+            </p>
+          </div>
         )}
       </div>
-
-      {error && <p className="mt-4 text-sm font-semibold text-red-300">{error}</p>}
 
       <button
         type="button"
         onClick={generate}
         className="glow-button mt-6 w-full rounded-full px-5 py-3 font-black transition"
       >
-        Generate
+        {output ? 'Generate Another' : 'Generate'}
       </button>
 
       {!output && (
         <div className="glass-card mt-6 rounded-2xl p-5 text-center text-cyan-50/65">
-          Add the details above and generate a ready-to-copy result.
+          Generate a preset idea or choose dropdown options to create a design plan.
         </div>
       )}
       {Array.isArray(output) && <OutputList items={output} />}
-      {output && !Array.isArray(output) && (
-        <>
-          {tool.slug === 'thumbnail-idea-prompt-generator' && (
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <CopyButton
-                label="Copy Full Plan"
-                text={Object.entries(output)
-                  .map(([label, value]) => `${label}:\n${value}`)
-                  .join('\n\n')}
-              />
-              <CopyButton label="Copy AI Prompt" text={output['AI Image Prompt']} />
-              <button
-                type="button"
-                onClick={generate}
-                className="ghost-button rounded-full px-4 py-2 text-sm font-bold transition"
-              >
-                Generate Another
-              </button>
-            </div>
-          )}
-          <OutputObject output={output} />
-        </>
-      )}
+      {output && !Array.isArray(output) && <OutputObject output={output} />}
+
+      <div className="glass-card mt-6 rounded-2xl p-5 text-center">
+        <p className="font-black text-white">Need custom design? Starting from $2.</p>
+        <a
+          href={whatsAppLink}
+          className="glow-button mt-4 inline-flex rounded-full px-5 py-3 font-black transition"
+        >
+          Contact me on WhatsApp
+        </a>
+      </div>
     </div>
   )
 }

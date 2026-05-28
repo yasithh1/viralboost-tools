@@ -2,10 +2,10 @@ import { Link, NavLink } from 'react-router-dom'
 
 const navItems = [
   ['Home', '/'],
-  ['Tools', '/tools'],
-  ['Guides', '/guides'],
+  ['Free Tools', '/tools'],
   ['Design Services', '/design-services'],
-  ['Share Idea', '/share-idea'],
+  ['Portfolio', '/portfolio'],
+  ['Guides', '/guides'],
   ['Contact', '/contact'],
 ]
 
@@ -45,7 +45,7 @@ function Navbar() {
           ))}
         </div>
         <Link
-          to="/tools/content-pack-generator"
+          to="/tools"
           className="glow-button hidden shrink-0 rounded-full px-4 py-2 text-sm font-black transition sm:inline-flex"
         >
           Start Free

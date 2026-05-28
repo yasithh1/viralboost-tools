@@ -10,13 +10,13 @@ function ContactSection() {
             </h2>
             <p className="mt-4 max-w-2xl text-cyan-50/75">
               Tell me what you need for your page or business. I can help with
-              Facebook posts, thumbnails, captions, reels, and content ideas.
+              thumbnails, Facebook post designs, TikTok covers, and content ideas.
             </p>
             <a
-              href="/tools"
-              className="ghost-button mt-6 inline-flex rounded-full px-6 py-3 text-center font-bold transition"
+              href="https://wa.me/947XXXXXXXX?text=Hi%20I%20want%20to%20order%20a%20design"
+              className="glow-button mt-6 inline-flex rounded-full px-6 py-3 text-center font-bold transition"
             >
-              View Services
+              Order on WhatsApp
             </a>
           </div>
 
@@ -59,11 +59,11 @@ function ContactSection() {
                 className="glass-input mt-2 w-full rounded-xl px-4 py-3 outline-none transition"
               >
                 <option value="">Select a service</option>
-                <option>Facebook posts</option>
-                <option>Thumbnail text or design</option>
-                <option>Captions and hashtags</option>
-                <option>Reels or TikTok ideas</option>
-                <option>Custom content plan</option>
+                <option>YouTube thumbnail</option>
+                <option>Facebook post design</option>
+                <option>TikTok cover</option>
+                <option>Creator Pack</option>
+                <option>Growth Pack</option>
               </select>
             </label>
 
@@ -73,7 +73,7 @@ function ContactSection() {
                 required
                 name="message"
                 rows="5"
-                placeholder="Example: I need 10 Facebook posts for my cake business..."
+                placeholder="Example: I need a YouTube thumbnail for my fitness video..."
                 className="glass-input mt-2 w-full resize-none rounded-xl px-4 py-3 outline-none transition placeholder:text-cyan-100/35"
               />
             </label>
