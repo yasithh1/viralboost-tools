@@ -22,7 +22,6 @@ function DesignServicesPage() {
           Send Design Request by Email
         </a>
       </PageHero>
-      <PortfolioSection />
       <section className="px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-3xl font-black text-white">Simple Pricing</h2>
@@ -41,6 +40,7 @@ function DesignServicesPage() {
           </div>
         </div>
       </section>
+      <PortfolioSection />
     </>
   )
 }
