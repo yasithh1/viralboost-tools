@@ -1,0 +1,48 @@
+import PortfolioSection from '../components/PortfolioSection'
+import PageHero from '../components/PageHero'
+
+const prices = [
+  ['Starter Design', '$2', ['1 thumbnail, Facebook post, or TikTok cover', 'Text included', '1 revision', 'JPG/PNG delivery']],
+  ['Creator Pack', '$5', ['3 designs', '2 revisions', 'JPG/PNG delivery']],
+  ['Growth Pack', '$10', ['7 designs', 'Priority support', 'Custom style']],
+]
+
+function DesignServicesPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Design Services"
+        title="Thumbnail & Content Design Services"
+        text="Need designs like this for your page or channel? I create YouTube thumbnails, Facebook post designs, TikTok covers, captions, and content ideas for creators and small businesses."
+      >
+        <a
+          href="https://wa.me/947XXXXXXXX?text=Hi%20I%20want%20to%20order%20a%20design"
+          className="inline-flex rounded-lg bg-yellow-300 px-6 py-3 font-black text-slate-950 transition hover:bg-yellow-200"
+        >
+          Order on WhatsApp
+        </a>
+      </PageHero>
+      <PortfolioSection />
+      <section className="px-4 py-14 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-3xl font-black text-white">Simple Pricing</h2>
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            {prices.map(([name, price, features]) => (
+              <article key={name} className="rounded-lg border border-slate-800 bg-slate-900/80 p-6">
+                <h3 className="text-xl font-black text-white">{name}</h3>
+                <p className="mt-3 text-4xl font-black text-yellow-300">{price}</p>
+                <ul className="mt-5 space-y-3 text-sm text-slate-300">
+                  {features.map((feature) => (
+                    <li key={feature}>- {feature}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
+export default DesignServicesPage

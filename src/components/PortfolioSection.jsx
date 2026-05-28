@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const portfolioItems = [
   {
@@ -106,12 +107,12 @@ function PortfolioSection() {
             I create YouTube thumbnails, Facebook post designs, TikTok covers,
             and content ideas.
           </p>
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="mt-6 inline-flex rounded-lg bg-yellow-300 px-6 py-3 font-black text-slate-950 transition hover:bg-yellow-200"
           >
             Contact Me
-          </a>
+          </Link>
         </div>
       </div>
     </section>

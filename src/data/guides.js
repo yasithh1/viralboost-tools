@@ -1,0 +1,95 @@
+export const guides = [
+  {
+    slug: 'how-to-create-facebook-engagement-posts',
+    title: 'How to Create Facebook Engagement Posts',
+    tool: '/tools/facebook-engagement-post-generator',
+    toolName: 'Facebook Engagement Post Generator',
+    intro: 'Facebook engagement posts work best when they make the reader answer quickly. A good post does not feel like homework. It feels like a simple question, a fun choice, or a small challenge.',
+    sections: [
+      ['Start with an easy action', 'Ask people to comment A or B, rate something from 1 to 10, finish a sentence, or choose between two options. Simple actions get more responses because people do not need to think too much before joining.'],
+      ['Use post styles that invite replies', 'Quiz posts, this-or-that posts, vote posts, opinion questions, fill-in-the-blank prompts, and rating posts are useful because they create a clear reason to comment. For example: "Which one helps phone speed the most? A) Storage B) Wallpaper C) Ringtone D) Font style."'],
+      ['Keep the topic close to your audience', 'A food page should ask about recipes, a tech page should ask about phones or apps, and a shop page should ask about product choices. Engagement improves when the question feels connected to why people followed the page.'],
+      ['End with a clear CTA', 'Use direct lines such as "Comment your answer below", "Vote A or B", or "Tell us your opinion." Do not hide the action. Tell the reader exactly what to do next.'],
+    ],
+  },
+  {
+    slug: 'best-tiktok-hooks-for-beginners',
+    title: 'Best TikTok Hooks for Beginners',
+    tool: '/tools/tiktok-hook-generator',
+    toolName: 'TikTok Hook Generator',
+    intro: 'The first line of a short video decides whether people keep watching. Beginners should use hooks that are clear, specific, and connected to a problem or result.',
+    sections: [
+      ['Use curiosity without being confusing', 'Strong hooks make people want the next sentence. Examples include "Nobody tells beginners this..." or "Here is the truth about..." These work because they promise useful information.'],
+      ['Speak to one person', 'A hook like "Stop scrolling if you want better content" feels direct. It tells the right viewer that the video is for them. Avoid broad openings such as "Hello everyone" because they waste the first seconds.'],
+      ['Show a result or mistake', 'Beginner-friendly hooks often focus on results and mistakes: "I tried this for 7 days", "Do not make this mistake", or "This simple trick worked." These lines create a reason to watch.'],
+      ['Match the hook to the video', 'Do not use a dramatic hook if the video does not deliver. If the hook promises a mistake, show the mistake. If it promises a result, explain the result clearly.'],
+    ],
+  },
+  {
+    slug: 'how-to-write-better-captions-for-reels',
+    title: 'How to Write Better Captions for Reels',
+    tool: '/tools/caption-generator',
+    toolName: 'Caption Generator',
+    intro: 'A good caption supports the video. It gives context, adds emotion, and tells the viewer what to do next without making the post feel heavy.',
+    sections: [
+      ['Keep the message focused', 'One caption should usually support one main idea. If your reel is about gym motivation, the caption should not jump into business, travel, and lifestyle at the same time.'],
+      ['Choose the right style', 'Motivational captions work for fitness and personal growth. Professional captions work for services and businesses. Funny captions work when the visual is relatable or casual.'],
+      ['Add a useful CTA', 'Captions perform better when they guide the next action. Try "Save this for later", "Comment your answer", "Follow for more tips", or "DM me for details."'],
+      ['Write for humans first', 'Do not stuff captions with repeated keywords. Make them readable. A simple caption that feels natural is better than a long caption nobody finishes.'],
+    ],
+  },
+  {
+    slug: 'best-hashtags-for-content-creators',
+    title: 'Best Hashtags for Content Creators',
+    tool: '/tools/hashtag-generator',
+    toolName: 'Hashtag Generator',
+    intro: 'Hashtags help organize content and give platforms extra context. They are not magic, but they can support reach when they match the topic and audience.',
+    sections: [
+      ['Mix niche and broad tags', 'Use a few topic-specific hashtags and a few broader creator tags. For example, a fitness post can use #gymtips, #fitnessmotivation, #workoutlife, and #contentcreator.'],
+      ['Use different set sizes', 'Small sets are clean and simple. Medium sets give more context. Large sets are useful when you want more discovery keywords. Test different sizes and watch your results.'],
+      ['Avoid unrelated tags', 'Do not add hashtags only because they are popular. If your post is about phone tips, unrelated food or fashion tags may confuse the algorithm and the viewer.'],
+      ['Save reusable groups', 'Create groups for your main niches so you can post faster. Keep updating them when your content changes.'],
+    ],
+  },
+  {
+    slug: 'thumbnail-text-ideas-for-youtube-videos',
+    title: 'Thumbnail Text Ideas for YouTube Videos',
+    tool: '/tools/thumbnail-text-generator',
+    toolName: 'Thumbnail Text Generator',
+    intro: 'Thumbnail text should be short, bold, and easy to understand in one second. The goal is not to explain everything. The goal is to create interest.',
+    sections: [
+      ['Use fewer words', 'Strong thumbnail text often uses two to five words: "I Tried This", "Before / After", "Do Not Do This", or "30 Days Later." Short text is easier to read on mobile.'],
+      ['Create contrast with the title', 'If the video title explains the topic, the thumbnail text can create curiosity. If the title is serious, the thumbnail can show the result or emotion.'],
+      ['Make the promise clear', 'Good text hints at a result, mistake, test, comparison, or transformation. Examples include "This Changed Everything" and "No One Expected This."'],
+      ['Design matters too', 'Use high contrast, readable fonts, clear faces or objects, and enough spacing. Text should not fight with the image.'],
+    ],
+  },
+  {
+    slug: 'how-to-reply-to-customer-comments',
+    title: 'How to Reply to Customer Comments',
+    tool: '/tools/comment-reply-generator',
+    toolName: 'Comment Reply Generator',
+    intro: 'Fast and polite replies help small businesses build trust. The goal is to answer clearly, move serious buyers to DM, and keep the public comment section professional.',
+    sections: [
+      ['Reply based on intent', 'A price question needs a different reply than a positive comment. Interested customers need guidance. Negative comments need calm support. Match the reply to the comment type.'],
+      ['Keep sensitive details private', 'For prices, addresses, custom orders, and personal details, ask the customer to message you. This keeps the comment clean and helps you continue the sale privately.'],
+      ['Use a tone that fits your brand', 'Friendly works for casual pages. Professional works for premium services. Short replies are useful when you have many comments. Sales-focused replies help move buyers forward.'],
+      ['Do not argue publicly', 'For negative comments, stay polite and invite the person to message you. A calm reply protects your brand more than a long public argument.'],
+    ],
+  },
+  {
+    slug: 'how-to-create-content-faster',
+    title: 'How to Create Content Faster',
+    tool: '/tools/content-pack-generator',
+    toolName: 'Content Pack Generator',
+    intro: 'Creating content faster does not mean creating careless content. It means using repeatable systems so you spend less time staring at a blank screen.',
+    sections: [
+      ['Start with one idea', 'Pick a topic like gym motivation, phone tips, cake business, or AI tools. Turn that one idea into a caption, hook, Facebook post, thumbnail text, hashtags, and CTA.'],
+      ['Batch similar tasks', 'Write captions together, hooks together, and thumbnail text together. Switching tasks too often slows you down. Batching keeps your focus clean.'],
+      ['Use templates wisely', 'Templates give you a starting point. Edit them to match your voice, audience, and offer. The best creators use systems but still add personality.'],
+      ['Reuse ideas in different formats', 'One Facebook question can become a TikTok hook, a reel caption, a YouTube Short, or a thumbnail idea. This saves time and keeps your message consistent.'],
+    ],
+  },
+]
+
+export const getGuideBySlug = (slug) => guides.find((guide) => guide.slug === slug)
