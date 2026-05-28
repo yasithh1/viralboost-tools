@@ -33,9 +33,9 @@ const portfolioItems = [
     aspect: 'square',
   },
   {
-    title: 'diting Service Thumbnail',
+    title: 'Editing Service Thumbnail',
     type: 'Social media design',
-    image: '/portfolio/Editing-Service.jpg',
+    image: '/portfolio/Editing-Service.png',
   },
   {
     title: 'Creator Growth Thumbnail',
