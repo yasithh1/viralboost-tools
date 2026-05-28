@@ -14,8 +14,18 @@ function Navbar() {
     <header className="sticky top-0 z-50 px-4 py-4 sm:px-6 lg:px-8">
       <nav className="glass-panel mx-auto flex max-w-6xl flex-col gap-4 rounded-[2rem] px-5 py-3 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex items-center justify-between gap-4 lg:shrink-0">
-          <Link to="/" className="text-lg font-black tracking-tight text-white drop-shadow-[0_0_14px_rgba(190,242,100,0.35)]">
-            ViralBoost <span className="aqua-text">Tools</span>
+          <Link
+            to="/"
+            className="flex items-center gap-3 text-lg font-black tracking-tight text-white drop-shadow-[0_0_14px_rgba(190,242,100,0.35)]"
+          >
+            <img
+              src="/viralboost-logo.png"
+              alt="ViralBoost Tools logo"
+              className="h-9 w-9 rounded-full object-cover ring-1 ring-lime-200/30"
+            />
+            <span>
+              ViralBoost <span className="aqua-text">Tools</span>
+            </span>
           </Link>
         </div>
         <div className="flex gap-4 overflow-x-auto pb-1 text-sm font-medium text-lime-50/70 lg:justify-center lg:pb-0">
