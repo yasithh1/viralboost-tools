@@ -2,48 +2,43 @@ import { useState } from 'react'
 
 const portfolioItems = [
   {
-    title: 'Fitness',
+    title: 'Fitness Thumbnail',
     type: 'YouTube thumbnail',
     image: '/portfolio/fitness.png',
   },
   {
-    title: 'Tech Tips',
+    title: 'Tech Tips Thumbnail',
     type: 'Facebook post design',
     image: '/portfolio/techtips.png',
   },
   {
-    title: 'AI Tools',
+    title: 'AI Tools Thumbnail',
     type: 'TikTok cover',
     image: '/portfolio/ai-tools.png',
   },
   {
-    title: 'Vlog',
+    title: 'Vlog Thumbnail',
     type: 'YouTube thumbnail',
     image: '/portfolio/vlog.png',
   },
   {
-    title: 'Motivation',
+    title: 'Motivation Thumbnail',
     type: 'Reels cover',
     image: '/portfolio/motivation.png',
   },
   {
-    title: 'Before/After Editing',
+    title: 'Facebook Engagement Design',
     type: '1:1 editing sample',
     image: '/portfolio/before-after-editing.png',
     aspect: 'square',
   },
   {
-    title: 'Business Promo',
-    type: 'Facebook post design',
-    image: '/portfolio/business-promo.jpg',
-  },
-  {
-    title: 'Product Post',
+    title: 'diting Service Thumbnail',
     type: 'Social media design',
-    image: '/portfolio/product-post.jpg',
+    image: '/portfolio/Editing-Service.jpg',
   },
   {
-    title: 'Creator Cover',
+    title: 'Creator Growth Thumbnail',
     type: 'Short video cover',
     image: '/portfolio/creator-cover.png',
   },
