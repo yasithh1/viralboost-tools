@@ -6,7 +6,7 @@ function ShareIdeaPage() {
 
   const submitIdea = (event) => {
     event.preventDefault()
-    setMessage('Backend coming soon. Please use WhatsApp to send your idea.')
+    setMessage('Backend coming soon. Please use email or the contact page to send your idea.')
   }
 
   return (
@@ -17,10 +17,10 @@ function ShareIdeaPage() {
         text="Have a tool idea or content idea? Send it to me and I may add it to ViralBoost Tools."
       >
         <a
-          href="https://wa.me/947XXXXXXXX?text=Hi%20I%20have%20a%20content%20tool%20idea%20for%20ViralBoost%20Tools"
+          href="mailto:yourname@example.com?subject=ViralBoost%20Tools%20Idea"
           className="glow-button inline-flex rounded-full px-6 py-3 font-black transition"
         >
-          Send Idea on WhatsApp
+          Send Idea by Email
         </a>
       </PageHero>
       <section className="px-4 py-12 sm:px-6 lg:px-8">

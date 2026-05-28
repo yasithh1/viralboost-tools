@@ -16,10 +16,10 @@ function DesignServicesPage() {
         text="Need designs like this for your page or channel? I create YouTube thumbnails, Facebook post designs, TikTok covers, captions, and content ideas for creators and small businesses."
       >
         <a
-          href="https://wa.me/947XXXXXXXX?text=Hi%20I%20want%20to%20order%20a%20design"
+          href="mailto:yourname@example.com?subject=Design%20Order%20Request"
           className="glow-button inline-flex rounded-full px-6 py-3 font-black transition"
         >
-          Order on WhatsApp
+          Send Design Request by Email
         </a>
       </PageHero>
       <PortfolioSection />

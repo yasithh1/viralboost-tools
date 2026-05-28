@@ -10,7 +10,11 @@ function HomePage() {
     <>
       <PageHero
         eyebrow="Free Creator Toolkit"
-        title="Create Better Social Media Content for Free"
+        title={
+          <>
+            Creator tools that <span className="hero-word">grow</span> with you.
+          </>
+        }
         text="Generate content packs, Facebook engagement posts, captions, hashtags, TikTok hooks, thumbnail text, comment replies, bios, CTAs, and image prompts without login."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
