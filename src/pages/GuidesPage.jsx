@@ -13,12 +13,12 @@ function GuidesPage() {
       <section className="px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2 lg:grid-cols-3">
           {guides.map((guide) => (
-            <article key={guide.slug} className="rounded-lg border border-slate-800 bg-slate-900/80 p-6">
+            <article key={guide.slug} className="glass-card rounded-[1.5rem] p-6">
               <h2 className="text-xl font-black text-white">{guide.title}</h2>
-              <p className="mt-3 text-sm leading-6 text-slate-300">{guide.intro}</p>
+              <p className="mt-3 text-sm leading-6 text-cyan-50/75">{guide.intro}</p>
               <Link
                 to={`/guides/${guide.slug}`}
-                className="mt-5 inline-flex rounded-lg bg-yellow-300 px-4 py-3 font-black text-slate-950 transition hover:bg-yellow-200"
+                className="glow-button mt-5 inline-flex rounded-full px-4 py-3 font-black transition"
               >
                 Read Guide
               </Link>

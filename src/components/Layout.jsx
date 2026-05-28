@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 
 function Layout() {
   return (
-    <div className="min-h-screen overflow-hidden bg-slate-950 text-white">
+    <div className="app-shell min-h-screen overflow-hidden text-white">
       <Navbar />
       <main>
         <Outlet />

@@ -14,7 +14,7 @@ function CopyButton({ text, label = 'Copy' }) {
     <button
       type="button"
       onClick={copyText}
-      className="rounded-lg border border-slate-700 px-4 py-2 text-sm font-bold text-white transition hover:border-yellow-300 hover:text-yellow-300"
+      className="ghost-button rounded-full px-4 py-2 text-sm font-bold transition"
     >
       {copied ? 'Copied!' : label}
     </button>

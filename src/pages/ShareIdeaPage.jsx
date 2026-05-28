@@ -18,7 +18,7 @@ function ShareIdeaPage() {
       >
         <a
           href="https://wa.me/947XXXXXXXX?text=Hi%20I%20have%20a%20content%20tool%20idea%20for%20ViralBoost%20Tools"
-          className="inline-flex rounded-lg bg-yellow-300 px-6 py-3 font-black text-slate-950 transition hover:bg-yellow-200"
+          className="glow-button inline-flex rounded-full px-6 py-3 font-black transition"
         >
           Send Idea on WhatsApp
         </a>
@@ -26,27 +26,27 @@ function ShareIdeaPage() {
       <section className="px-4 py-12 sm:px-6 lg:px-8">
         <form
           onSubmit={submitIdea}
-          className="mx-auto max-w-3xl rounded-lg border border-slate-800 bg-slate-900/80 p-6"
+          className="glass-panel mx-auto max-w-3xl rounded-[2rem] p-6"
         >
           <label className="block">
-            <span className="text-sm font-bold text-slate-200">Name</span>
-            <input className="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none focus:border-yellow-300" />
+            <span className="text-sm font-bold text-cyan-50">Name</span>
+            <input className="glass-input mt-2 w-full rounded-xl px-4 py-3 outline-none" />
           </label>
           <label className="mt-4 block">
-            <span className="text-sm font-bold text-slate-200">Idea</span>
+            <span className="text-sm font-bold text-cyan-50">Idea</span>
             <textarea
               rows="5"
-              className="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none focus:border-yellow-300"
+              className="glass-input mt-2 w-full rounded-xl px-4 py-3 outline-none"
             />
           </label>
           <label className="mt-4 block">
-            <span className="text-sm font-bold text-slate-200">Contact</span>
-            <input className="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none focus:border-yellow-300" />
+            <span className="text-sm font-bold text-cyan-50">Contact</span>
+            <input className="glass-input mt-2 w-full rounded-xl px-4 py-3 outline-none" />
           </label>
-          <button className="mt-5 w-full rounded-lg bg-yellow-300 px-5 py-3 font-black text-slate-950">
+          <button className="glow-button mt-5 w-full rounded-full px-5 py-3 font-black">
             Submit Idea
           </button>
-          {message && <p className="mt-4 text-center font-bold text-yellow-300">{message}</p>}
+          {message && <p className="aqua-text mt-4 text-center font-bold">{message}</p>}
         </form>
       </section>
     </>

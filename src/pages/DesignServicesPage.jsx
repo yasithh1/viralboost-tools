@@ -17,7 +17,7 @@ function DesignServicesPage() {
       >
         <a
           href="https://wa.me/947XXXXXXXX?text=Hi%20I%20want%20to%20order%20a%20design"
-          className="inline-flex rounded-lg bg-yellow-300 px-6 py-3 font-black text-slate-950 transition hover:bg-yellow-200"
+          className="glow-button inline-flex rounded-full px-6 py-3 font-black transition"
         >
           Order on WhatsApp
         </a>
@@ -28,10 +28,10 @@ function DesignServicesPage() {
           <h2 className="text-3xl font-black text-white">Simple Pricing</h2>
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             {prices.map(([name, price, features]) => (
-              <article key={name} className="rounded-lg border border-slate-800 bg-slate-900/80 p-6">
+              <article key={name} className="glass-card rounded-[1.5rem] p-6">
                 <h3 className="text-xl font-black text-white">{name}</h3>
-                <p className="mt-3 text-4xl font-black text-yellow-300">{price}</p>
-                <ul className="mt-5 space-y-3 text-sm text-slate-300">
+                <p className="aqua-text mt-3 text-4xl font-black">{price}</p>
+                <ul className="mt-5 space-y-3 text-sm text-cyan-50/75">
                   {features.map((feature) => (
                     <li key={feature}>- {feature}</li>
                   ))}

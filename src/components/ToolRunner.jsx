@@ -45,13 +45,13 @@ const promptStyles = [
 function Field({ label, value, onChange, placeholder }) {
   return (
     <label className="block">
-      <span className="text-sm font-bold text-slate-200">{label}</span>
+      <span className="text-sm font-bold text-cyan-50">{label}</span>
       <input
         type="text"
         value={value}
         onChange={(event) => onChange(event.target.value)}
         placeholder={placeholder}
-        className="mt-2 w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-yellow-300"
+        className="glass-input mt-2 w-full rounded-xl px-4 py-3 outline-none transition placeholder:text-cyan-100/35"
       />
     </label>
   )
@@ -60,11 +60,11 @@ function Field({ label, value, onChange, placeholder }) {
 function SelectField({ label, value, onChange, options }) {
   return (
     <label className="block">
-      <span className="text-sm font-bold text-slate-200">{label}</span>
+      <span className="text-sm font-bold text-cyan-50">{label}</span>
       <select
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className="mt-2 w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-white outline-none transition focus:border-yellow-300"
+        className="glass-input mt-2 w-full rounded-xl px-4 py-3 outline-none transition"
       >
         {options.map((option) => (
           <option key={option}>{option}</option>
@@ -78,7 +78,7 @@ function OutputList({ items }) {
   return (
     <div className="mt-6 space-y-3">
       {items.map((item, index) => (
-        <div key={`${item}-${index}`} className="rounded-lg border border-slate-800 bg-slate-900 p-4">
+        <div key={`${item}-${index}`} className="glass-card rounded-2xl p-4">
           <p className="whitespace-pre-wrap leading-7 text-slate-100">{item}</p>
           <div className="mt-3">
             <CopyButton text={item} />
@@ -93,8 +93,8 @@ function OutputObject({ output }) {
   return (
     <div className="mt-6 space-y-3">
       {Object.entries(output).map(([label, value]) => (
-        <div key={label} className="rounded-lg border border-slate-800 bg-slate-900 p-4">
-          <p className="text-sm font-black uppercase tracking-[0.18em] text-yellow-300">{label}</p>
+        <div key={label} className="glass-card rounded-2xl p-4">
+          <p className="aqua-text text-sm font-black uppercase tracking-[0.18em]">{label}</p>
           <p className="mt-2 whitespace-pre-wrap leading-7 text-slate-100">{value}</p>
           <div className="mt-3">
             <CopyButton text={value} />
@@ -151,7 +151,7 @@ function ToolRunner({ tool }) {
   }
 
   return (
-    <div className="rounded-lg border border-slate-800 bg-slate-950 p-5 shadow-2xl shadow-black/30 sm:p-8">
+    <div className="glass-panel rounded-[2rem] p-5 sm:p-8">
       <div className="grid gap-4">
         {requiresTopic && (
           <Field
@@ -198,13 +198,13 @@ function ToolRunner({ tool }) {
       <button
         type="button"
         onClick={generate}
-        className="mt-6 w-full rounded-lg bg-yellow-300 px-5 py-3 font-black text-slate-950 transition hover:bg-yellow-200"
+        className="glow-button mt-6 w-full rounded-full px-5 py-3 font-black transition"
       >
         Generate
       </button>
 
       {!output && (
-        <div className="mt-6 rounded-lg border border-slate-800 bg-slate-900 p-5 text-center text-slate-400">
+        <div className="glass-card mt-6 rounded-2xl p-5 text-center text-cyan-50/65">
           Add the details above and generate a ready-to-copy result.
         </div>
       )}

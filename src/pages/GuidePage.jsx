@@ -12,7 +12,7 @@ function GuidePage() {
     <>
       <PageHero eyebrow="Guide" title={guide.title} text={guide.intro} />
       <article className="px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl leading-8 text-slate-300">
+        <div className="mx-auto max-w-3xl leading-8 text-cyan-50/78">
           {guide.sections.map(([title, text]) => (
             <section key={title} className="mb-8">
               <h2 className="text-2xl font-black text-white">{title}</h2>
@@ -81,7 +81,7 @@ function GuidePage() {
               idea becomes a full content plan.
             </p>
           </section>
-          <section className="rounded-lg border border-yellow-300/20 bg-slate-900 p-6">
+          <section className="glass-panel rounded-[2rem] p-6">
             <h2 className="text-2xl font-black text-white">Try the free tool now</h2>
             <p className="mt-3">
               Use the related free tool to create ideas faster and customize the
@@ -89,7 +89,7 @@ function GuidePage() {
             </p>
             <Link
               to={guide.tool}
-              className="mt-5 inline-flex rounded-lg bg-yellow-300 px-5 py-3 font-black text-slate-950 transition hover:bg-yellow-200"
+              className="glow-button mt-5 inline-flex rounded-full px-5 py-3 font-black transition"
             >
               Try {guide.toolName}
             </Link>
