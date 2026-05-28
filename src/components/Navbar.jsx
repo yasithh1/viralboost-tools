@@ -15,6 +15,9 @@ function Navbar() {
           <a className="transition hover:text-yellow-300" href="#how-it-works">
             How It Works
           </a>
+          <a className="transition hover:text-yellow-300" href="#portfolio">
+            Portfolio
+          </a>
           <a className="transition hover:text-yellow-300" href="#contact">
             Contact
           </a>

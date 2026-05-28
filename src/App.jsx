@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ToolCard from './components/ToolCard'
 import Generator from './components/Generator'
+import PortfolioSection from './components/PortfolioSection'
 import ContactSection from './components/ContactSection'
 import InfoSections from './components/InfoSections'
 import SeoContent from './components/SeoContent'
@@ -77,6 +78,7 @@ function App() {
           </div>
         </section>
 
+        <PortfolioSection />
         <ContactSection />
         <SeoContent />
         <InfoSections />
