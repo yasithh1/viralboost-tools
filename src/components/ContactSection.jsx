@@ -13,14 +13,15 @@ function ContactSection() {
               thumbnails, Facebook post designs, TikTok covers, and content ideas.
             </p>
             <a
-              href="mailto:yourname@example.com?subject=ViralBoost%20Studio%20Design%20Order"
+              href="#contact-form"
               className="glow-button mt-6 inline-flex rounded-full px-6 py-3 text-center font-bold transition"
             >
-              Email Your Order
+              Contact Us
             </a>
           </div>
 
           <form
+            id="contact-form"
             action="https://formspree.io/f/meedveye"
             method="POST"
             className="glass-card rounded-[1.5rem] p-5 text-white"

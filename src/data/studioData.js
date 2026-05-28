@@ -27,6 +27,3 @@ export const portfolioCategories = [
   'Motivation designs',
   'Business designs',
 ]
-
-export const orderEmail =
-  'mailto:yourname@example.com?subject=ViralBoost%20Studio%20Design%20Order'

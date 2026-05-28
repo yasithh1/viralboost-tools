@@ -1,6 +1,5 @@
 import ContactSection from '../components/ContactSection'
 import PageHero from '../components/PageHero'
-import { orderEmail } from '../data/studioData'
 
 function ContactPage() {
   return (
@@ -10,8 +9,8 @@ function ContactPage() {
         title="Order a Design"
         text="Send your design request and I will reply with details. You can order thumbnails, Facebook posts, TikTok covers, Instagram posts, captions, and content idea packs."
       >
-        <a href={orderEmail} className="glow-button inline-flex rounded-full px-6 py-3 font-black transition">
-          Email Your Order
+        <a href="#contact-form" className="glow-button inline-flex rounded-full px-6 py-3 font-black transition">
+          Contact Us
         </a>
       </PageHero>
 
