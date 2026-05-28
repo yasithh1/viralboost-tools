@@ -63,11 +63,11 @@ export const tools = [
     keywords: 'call to action generator, CTA ideas for captions, post CTA lines',
   },
   {
-    slug: 'image-prompt-generator',
-    emoji: 'AI',
-    name: 'Image Prompt Generator',
-    benefit: 'Create image prompts, text overlays, aspect ratios, and design notes for AI images or thumbnails.',
-    keywords: 'AI image prompt generator, thumbnail prompt generator, social media design prompt',
+    slug: 'thumbnail-idea-prompt-generator',
+    emoji: 'Plan',
+    name: 'Thumbnail Idea & Prompt Generator',
+    benefit: 'Generate a full thumbnail design plan with concept, text, placement, subject, background, AI prompt, and editing notes.',
+    keywords: 'thumbnail idea generator, AI thumbnail prompt generator, YouTube thumbnail design plan, Canva thumbnail ideas',
   },
 ]
 

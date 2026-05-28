@@ -15,7 +15,7 @@ function HomePage() {
             Creator tools that <span className="hero-word">grow</span> with you.
           </>
         }
-        text="Generate content packs, Facebook engagement posts, captions, hashtags, TikTok hooks, thumbnail text, comment replies, bios, CTAs, and image prompts without login."
+        text="Generate content packs, Facebook engagement posts, captions, hashtags, TikTok hooks, thumbnail text, comment replies, bios, CTAs, and thumbnail design plans without login."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <Link

@@ -278,22 +278,90 @@ const ctaLines = [
 
 export const generateCtas = () => pickMany(ctaLines, 10)
 
-const promptStyles = {
-  'YouTube thumbnail': ['16:9', 'Bold face expression, high contrast background, bright yellow text, clear subject, dramatic lighting'],
-  'Facebook engagement post': ['1:1', 'Clean social post design, readable question text, bright accents, simple layout, comment-friendly visual'],
-  'Fitness motivation': ['1:1', 'Strong athlete pose, gym background, dramatic shadows, motivational bold text, high energy'],
-  'Tech post': ['1:1', 'Modern smartphone or laptop setup, neon accents, clean tech background, clear title space'],
-  'Business post': ['1:1', 'Professional workspace, confident business owner, clean premium style, brand-friendly colors'],
-  'Cinematic vlog': ['16:9', 'Cinematic street or travel scene, warm color grading, subject in motion, clean text area'],
+const platformRatios = {
+  YouTube: '16:9',
+  Facebook: '1:1',
+  TikTok: '9:16',
+  Instagram: '1:1',
 }
 
-export const generateImagePrompt = (style, topic) => {
-  const [ratio, notes] = promptStyles[style]
-  const idea = cleanTopic(topic)
+const nicheSubjects = {
+  Fitness: ['fitness creator holding dumbbells', 'person showing transformation progress', 'athlete training with strong focus'],
+  Tech: ['creator holding a smartphone', 'modern laptop and phone setup', 'tech reviewer pointing at a device'],
+  Motivation: ['confident person standing under dramatic light', 'creator looking at a bright goal symbol', 'person climbing steps toward success'],
+  Vlog: ['vlogger holding a camera in a cinematic scene', 'creator walking through a city street', 'travel creator looking at a scenic view'],
+  Business: ['business owner working at a desk', 'entrepreneur presenting an idea', 'small business owner with product display'],
+  Gaming: ['gamer reacting with headset', 'neon gaming setup with controller', 'focused player in a dark gaming room'],
+  Education: ['teacher explaining a topic on a board', 'student learning with laptop and notes', 'creator pointing at simple lesson graphics'],
+  'AI Tools': ['creator using futuristic AI dashboard', 'person surrounded by floating app icons', 'modern workspace with AI interface'],
+  'Social Media Growth': ['creator analyzing growth chart', 'phone screen with rising social stats', 'content creator planning posts'],
+}
+
+const goalConcepts = {
+  'Get clicks': ['high curiosity thumbnail', 'dramatic before-and-after visual', 'strong reaction-based design'],
+  'Get comments': ['question-based visual that invites opinions', 'comparison design with two clear choices', 'interactive post style with visible prompt'],
+  'Promote service': ['premium service-focused design', 'clean offer design with trust-building layout', 'client-attracting promotional thumbnail'],
+  'Explain topic': ['clear tutorial thumbnail', 'step-by-step educational design', 'simple explainer visual with strong subject'],
+  'Build brand': ['consistent branded creator design', 'professional authority-building visual', 'clean identity-focused thumbnail'],
+  'Make people curious': ['mystery-driven thumbnail', 'hidden-result visual with suspense', 'curiosity gap design with strong contrast'],
+}
+
+const styleNotes = {
+  Cinematic: ['dramatic lighting, depth, shadows, high contrast', 'orange and teal light, film-like color grading'],
+  Modern: ['clean layout, sleek shapes, bright accents, premium digital style', 'minimal gradients, sharp subject cutout, polished design'],
+  Dark: ['dark background, glowing highlights, strong shadows, intense mood', 'black and deep green palette with bright text contrast'],
+  Colorful: ['bright colors, energetic layout, playful visual elements', 'vibrant gradient background with bold readable text'],
+  Minimal: ['simple composition, clean spacing, few elements, strong readable text', 'plain background, one clear subject, no clutter'],
+  Viral: ['large emotional subject, bold text, arrows, glow, high contrast', 'clickable YouTube-style layout with big visual tension'],
+  Professional: ['premium brand look, clean typography, balanced spacing, trust-building colors', 'business-style layout with polished composition'],
+}
+
+const thumbnailTexts = {
+  Fitness: ['30 DAYS LATER', 'I TRIED THIS', 'BEFORE / AFTER', 'DON\'T QUIT'],
+  Tech: ['DON\'T DO THIS', 'PHONE HACKS', 'BATTERY FIX', 'I TESTED IT'],
+  Motivation: ['START TODAY', 'THIS CHANGED ME', 'NO EXCUSES', 'KEEP GOING'],
+  Vlog: ['A DAY I WON\'T FORGET', 'WHAT HAPPENED?', 'MY REAL LIFE', 'NEW JOURNEY'],
+  Business: ['GET MORE CLIENTS', 'START HERE', 'GROW FASTER', 'MY STRATEGY'],
+  Gaming: ['INSANE WIN', 'I TRIED THIS', 'NO ONE EXPECTED', 'BEST SETTINGS'],
+  Education: ['LEARN THIS FAST', 'BEGINNER GUIDE', 'SIMPLE METHOD', 'START HERE'],
+  'AI Tools': ['AI TOOLS YOU NEED', 'I TESTED AI', 'SAVE HOURS', 'NEW AI TRICK'],
+  'Social Media Growth': ['GROW FASTER', 'VIRAL STRATEGY', 'MORE VIEWS', 'CONTENT HACK'],
+}
+
+const placementOptions = [
+  'Place the text on the left side in large bold letters with black shadow.',
+  'Place the text at the top with strong spacing and a clear subject below.',
+  'Place the text on the right side and keep the main subject on the left.',
+  'Place the text in the center with a dark glow behind it for readability.',
+]
+
+const extraElements = [
+  'glowing arrow, small progress chart, particles, and light rays',
+  'circle highlight, reaction marks, subtle sparks, and depth shadow',
+  'before/after divider, small icons, glow outline, and motion streaks',
+  'simple badge, curved arrow, contrast shape, and soft background blur',
+]
+
+export const generateThumbnailPlan = ({ platform, niche, goal, style, topic }) => {
+  const idea = cleanTopic(topic) || niche.toLowerCase()
+  const ratio = platformRatios[platform]
+  const subject = randomItem(nicheSubjects[niche])
+  const concept = randomItem(goalConcepts[goal])
+  const styleDetail = randomItem(styleNotes[style])
+  const text = randomItem(thumbnailTexts[niche])
+  const placement = randomItem(placementOptions)
+  const extras = randomItem(extraElements)
+  const background = `${style.toLowerCase()} ${niche.toLowerCase()} background designed for ${platform}, with clear empty space for text and strong contrast around the subject`
+
   return {
-    'AI image prompt': `Create a high-quality ${style.toLowerCase()} image about ${idea}. Use a clear main subject, strong composition, sharp details, and space for text overlay.`,
-    'Suggested text': generateThumbnailText(idea),
-    'Aspect ratio': ratio,
-    'Design style notes': notes,
+    'Thumbnail Concept': `A ${concept} for ${platform} about ${idea}, designed to help ${goal.toLowerCase()} with a ${style.toLowerCase()} visual style.`,
+    'Text to Add': text,
+    'Text Placement': placement,
+    'Main Subject': `A ${subject}, looking clear, sharp, and easy to understand at small size.`,
+    'Background Idea': background,
+    'Extra Elements': extras,
+    'Color Style': `${styleDetail}. Use lime/yellow highlights for attention and keep the text readable.`,
+    'AI Image Prompt': `Create a ${style.toLowerCase()} ${platform} thumbnail design for ${idea}. Show a ${subject}, ${background}, ${styleDetail}, high contrast, sharp details, ${extras}, empty space for bold text, professional social media thumbnail design, ${ratio} aspect ratio.`,
+    'Editing Notes': `Add big text "${text}". Use thick font, black stroke, and soft shadow. Increase contrast, sharpen the main subject, darken busy background areas, and keep the layout readable on mobile. Best for Canva, Photoshop, CapCut, or AI image generation.`,
   }
 }

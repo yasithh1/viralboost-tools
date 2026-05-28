@@ -8,8 +8,8 @@ import {
   generateFacebookPost,
   generateHashtags,
   generateHook,
-  generateImagePrompt,
   generateReplies,
+  generateThumbnailPlan,
   generateThumbnailText,
 } from '../utils/generators'
 
@@ -33,14 +33,27 @@ const bioTypes = [
   'Freelancer bio',
   'Small business bio',
 ]
-const promptStyles = [
-  'YouTube thumbnail',
-  'Facebook engagement post',
-  'Fitness motivation',
-  'Tech post',
-  'Business post',
-  'Cinematic vlog',
+const platforms = ['YouTube', 'Facebook', 'TikTok', 'Instagram']
+const niches = [
+  'Fitness',
+  'Tech',
+  'Motivation',
+  'Vlog',
+  'Business',
+  'Gaming',
+  'Education',
+  'AI Tools',
+  'Social Media Growth',
 ]
+const thumbnailGoals = [
+  'Get clicks',
+  'Get comments',
+  'Promote service',
+  'Explain topic',
+  'Build brand',
+  'Make people curious',
+]
+const thumbnailStyles = ['Cinematic', 'Modern', 'Dark', 'Colorful', 'Minimal', 'Viral', 'Professional']
 
 function Field({ label, value, onChange, placeholder }) {
   return (
@@ -111,7 +124,10 @@ function ToolRunner({ tool }) {
   const [replyType, setReplyType] = useState(replyTypes[0])
   const [replyTone, setReplyTone] = useState(replyTones[0])
   const [bioType, setBioType] = useState(bioTypes[0])
-  const [promptStyle, setPromptStyle] = useState(promptStyles[0])
+  const [platform, setPlatform] = useState(platforms[0])
+  const [niche, setNiche] = useState(niches[0])
+  const [thumbnailGoal, setThumbnailGoal] = useState(thumbnailGoals[0])
+  const [thumbnailStyle, setThumbnailStyle] = useState(thumbnailStyles[0])
   const [error, setError] = useState('')
   const [output, setOutput] = useState(null)
 
@@ -119,6 +135,7 @@ function ToolRunner({ tool }) {
     'facebook-engagement-post-generator',
     'comment-reply-generator',
     'call-to-action-generator',
+    'thumbnail-idea-prompt-generator',
   ].includes(tool.slug)
 
   const ensureTopic = () => {
@@ -144,7 +161,14 @@ function ToolRunner({ tool }) {
       'comment-reply-generator': () => generateReplies(replyType, replyTone),
       'bio-generator': () => generateBios(bioType, topic),
       'call-to-action-generator': () => generateCtas(),
-      'image-prompt-generator': () => generateImagePrompt(promptStyle, topic),
+      'thumbnail-idea-prompt-generator': () =>
+        generateThumbnailPlan({
+          platform,
+          niche,
+          goal: thumbnailGoal,
+          style: thumbnailStyle,
+          topic,
+        }),
     }
 
     setOutput(actions[tool.slug]())
@@ -183,13 +207,31 @@ function ToolRunner({ tool }) {
         {tool.slug === 'bio-generator' && (
           <SelectField label="Bio type" value={bioType} onChange={setBioType} options={bioTypes} />
         )}
-        {tool.slug === 'image-prompt-generator' && (
-          <SelectField
-            label="Image style"
-            value={promptStyle}
-            onChange={setPromptStyle}
-            options={promptStyles}
-          />
+        {tool.slug === 'thumbnail-idea-prompt-generator' && (
+          <>
+            <div className="grid gap-4 md:grid-cols-2">
+              <SelectField label="Platform" value={platform} onChange={setPlatform} options={platforms} />
+              <SelectField label="Niche" value={niche} onChange={setNiche} options={niches} />
+              <SelectField
+                label="Goal"
+                value={thumbnailGoal}
+                onChange={setThumbnailGoal}
+                options={thumbnailGoals}
+              />
+              <SelectField
+                label="Style"
+                value={thumbnailStyle}
+                onChange={setThumbnailStyle}
+                options={thumbnailStyles}
+              />
+            </div>
+            <Field
+              label="Optional topic"
+              value={topic}
+              onChange={setTopic}
+              placeholder="Example: phone battery tips, gym transformation, AI tools for creators"
+            />
+          </>
         )}
       </div>
 
@@ -209,7 +251,29 @@ function ToolRunner({ tool }) {
         </div>
       )}
       {Array.isArray(output) && <OutputList items={output} />}
-      {output && !Array.isArray(output) && <OutputObject output={output} />}
+      {output && !Array.isArray(output) && (
+        <>
+          {tool.slug === 'thumbnail-idea-prompt-generator' && (
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <CopyButton
+                label="Copy Full Plan"
+                text={Object.entries(output)
+                  .map(([label, value]) => `${label}:\n${value}`)
+                  .join('\n\n')}
+              />
+              <CopyButton label="Copy AI Prompt" text={output['AI Image Prompt']} />
+              <button
+                type="button"
+                onClick={generate}
+                className="ghost-button rounded-full px-4 py-2 text-sm font-bold transition"
+              >
+                Generate Another
+              </button>
+            </div>
+          )}
+          <OutputObject output={output} />
+        </>
+      )}
     </div>
   )
 }
