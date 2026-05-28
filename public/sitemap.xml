@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://viralboost-tool.netlify.app/</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://viralboost-tool.netlify.app/tools</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://viralboost-tool.netlify.app/design-services</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://viralboost-tool.netlify.app/portfolio</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://viralboost-tool.netlify.app/guides</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://viralboost-tool.netlify.app/contact</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://viralboost-tool.netlify.app/services</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://viralboost-tool.netlify.app/portfolio</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://viralboost-tool.netlify.app/pricing</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://viralboost-tool.netlify.app/free-resources</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://viralboost-tool.netlify.app/guides</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://viralboost-tool.netlify.app/contact</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://viralboost-tool.netlify.app/privacy-policy</loc><lastmod>2026-05-28</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://viralboost-tool.netlify.app/terms</loc><lastmod>2026-05-28</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://viralboost-tool.netlify.app/tools/facebook-engagement-idea-generator</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://viralboost-tool.netlify.app/tools/thumbnail-text-generator</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://viralboost-tool.netlify.app/tools/tiktok-hook-generator</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://viralboost-tool.netlify.app/tools/hashtag-set-generator</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://viralboost-tool.netlify.app/tools/thumbnail-design-planner</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://viralboost-tool.netlify.app/guides/how-to-create-facebook-engagement-posts</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://viralboost-tool.netlify.app/guides/best-tiktok-hooks-for-beginners</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://viralboost-tool.netlify.app/guides/how-to-write-better-captions-for-reels</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://viralboost-tool.netlify.app/guides/best-hashtags-for-content-creators</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://viralboost-tool.netlify.app/guides/thumbnail-text-ideas-for-youtube-videos</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://viralboost-tool.netlify.app/guides/how-to-create-better-youtube-thumbnails</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://viralboost-tool.netlify.app/guides/best-thumbnail-text-ideas-for-beginners</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://viralboost-tool.netlify.app/guides/how-to-make-facebook-posts-more-engaging</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://viralboost-tool.netlify.app/guides/how-to-use-tiktok-hooks</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://viralboost-tool.netlify.app/guides/how-to-choose-colors-for-social-media-designs</loc><lastmod>2026-05-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { portfolioCategories } from '../data/studioData'
 
 const portfolioItems = [
   {
@@ -91,6 +92,13 @@ function PortfolioSection() {
             A quick look at design styles for thumbnails, Facebook posts, TikTok
             covers, reels covers, and content editing samples.
           </p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {portfolioCategories.map((category) => (
+              <span key={category} className="rounded-full border border-lime-200/20 px-3 py-1 text-xs text-lime-50/75">
+                {category}
+              </span>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -105,7 +113,7 @@ function PortfolioSection() {
           </h3>
           <p className="mx-auto mt-3 max-w-2xl text-cyan-50/75">
             I create YouTube thumbnails, Facebook post designs, TikTok covers,
-            and content ideas.
+            Instagram posts, captions, and content ideas.
           </p>
           <Link
             to="/contact"

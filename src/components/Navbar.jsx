@@ -2,9 +2,10 @@ import { Link, NavLink } from 'react-router-dom'
 
 const navItems = [
   ['Home', '/'],
-  ['Free Tools', '/tools'],
-  ['Design Services', '/design-services'],
+  ['Services', '/services'],
   ['Portfolio', '/portfolio'],
+  ['Pricing', '/pricing'],
+  ['Free Resources', '/free-resources'],
   ['Guides', '/guides'],
   ['Contact', '/contact'],
 ]
@@ -20,11 +21,11 @@ function Navbar() {
           >
             <img
               src="/viralboost-logo.png"
-              alt="ViralBoost Tools logo"
+              alt="ViralBoost Studio logo"
               className="h-9 w-9 rounded-full object-cover ring-1 ring-lime-200/30"
             />
             <span>
-              ViralBoost <span className="aqua-text">Tools</span>
+              ViralBoost <span className="aqua-text">Studio</span>
             </span>
           </Link>
         </div>
@@ -45,10 +46,10 @@ function Navbar() {
           ))}
         </div>
         <Link
-          to="/tools"
+          to="/contact"
           className="glow-button hidden shrink-0 rounded-full px-4 py-2 text-sm font-black transition sm:inline-flex"
         >
-          Start Free
+          Order Design
         </Link>
       </nav>
     </header>

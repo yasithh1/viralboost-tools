@@ -1,27 +1,27 @@
 import { Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import ContactPage from './pages/ContactPage'
-import DesignServicesPage from './pages/DesignServicesPage'
+import FreeResourcesPage from './pages/FreeResourcesPage'
 import GuidePage from './pages/GuidePage'
 import GuidesPage from './pages/GuidesPage'
 import HomePage from './pages/HomePage'
 import PortfolioPage from './pages/PortfolioPage'
+import PricingPage from './pages/PricingPage'
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage'
+import ServicesPage from './pages/ServicesPage'
 import TermsPage from './pages/TermsPage'
-import ToolPage from './pages/ToolPage'
-import ToolsPage from './pages/ToolsPage'
 
 function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<HomePage />} />
-        <Route path="tools" element={<ToolsPage />} />
-        <Route path="tools/:toolSlug" element={<ToolPage />} />
+        <Route path="services" element={<ServicesPage />} />
         <Route path="guides" element={<GuidesPage />} />
         <Route path="guides/:guideSlug" element={<GuidePage />} />
-        <Route path="design-services" element={<DesignServicesPage />} />
         <Route path="portfolio" element={<PortfolioPage />} />
+        <Route path="pricing" element={<PricingPage />} />
+        <Route path="free-resources" element={<FreeResourcesPage />} />
         <Route path="contact" element={<ContactPage />} />
         <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="terms" element={<TermsPage />} />

@@ -88,10 +88,10 @@ function GuidePage() {
               output for your own page, channel, or business.
             </p>
             <Link
-              to={guide.tool}
+              to="/free-resources"
               className="glow-button mt-5 inline-flex rounded-full px-5 py-3 font-black transition"
             >
-              Try {guide.toolName}
+              View Free Resources
             </Link>
           </section>
         </div>

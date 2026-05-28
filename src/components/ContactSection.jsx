@@ -13,10 +13,10 @@ function ContactSection() {
               thumbnails, Facebook post designs, TikTok covers, and content ideas.
             </p>
             <a
-              href="https://wa.me/947XXXXXXXX?text=Hi%20I%20want%20to%20order%20a%20design"
+              href="mailto:yourname@example.com?subject=ViralBoost%20Studio%20Design%20Order"
               className="glow-button mt-6 inline-flex rounded-full px-6 py-3 text-center font-bold transition"
             >
-              Order on WhatsApp
+              Email Your Order
             </a>
           </div>
 
@@ -25,7 +25,7 @@ function ContactSection() {
             method="POST"
             className="glass-card rounded-[1.5rem] p-5 text-white"
           >
-            <input type="hidden" name="_subject" value="New ViralBoost Tools contact request" />
+            <input type="hidden" name="_subject" value="New ViralBoost Studio design request" />
 
             <div className="grid gap-4 sm:grid-cols-2">
               <label className="block">

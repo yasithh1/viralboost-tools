@@ -1,73 +1,60 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
-import ToolCardLink from '../components/ToolCardLink'
-import { tools } from '../data/tools'
+import PortfolioSection from '../components/PortfolioSection'
+import { pricing, services } from '../data/studioData'
 
 function HomePage() {
-  const featuredTools = tools.slice(0, 6)
-
   return (
     <>
       <PageHero
-        eyebrow="Creator Tools + Design Services"
-        title="Free Creator Tools & Affordable Design Services"
-        text="Get content ideas, thumbnail text, hooks, hashtags, and custom designs for your social media pages."
+        eyebrow="ViralBoost Studio"
+        title="Affordable Thumbnail & Social Media Post Designs"
+        text="I create YouTube thumbnails, Facebook posts, TikTok covers, captions, and content ideas for creators and small businesses."
       >
-        <div className="flex flex-col gap-3 sm:flex-row">
-          <Link
-            to="/tools"
-            className="glow-button rounded-full px-6 py-3 text-center font-black transition"
-          >
-            Explore Free Tools
+        <div className="flex flex-col justify-center gap-3 sm:flex-row">
+          <Link to="/contact" className="glow-button rounded-full px-6 py-3 text-center font-black transition">
+            Order a Design
           </Link>
-          <Link
-            to="/design-services"
-            className="ghost-button rounded-full px-6 py-3 text-center font-black transition"
-          >
-            Order Design
+          <Link to="/portfolio" className="ghost-button rounded-full px-6 py-3 text-center font-black transition">
+            View Portfolio
           </Link>
         </div>
       </PageHero>
 
       <section className="px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <div className="max-w-3xl">
-            <p className="aqua-text text-sm font-semibold uppercase tracking-[0.2em]">
-              Free Preset Tools
-            </p>
-            <h2 className="mt-3 text-3xl font-black text-white">Simple tools for creators and page admins.</h2>
-            <p className="mt-4 leading-7 text-cyan-50/75">
-              ViralBoost Tools focuses on preset ideas and dropdown-based planning.
-              No backend, no database, no AI API. Just fast tools plus affordable
-              thumbnail and post design services.
-            </p>
-          </div>
+          <p className="aqua-text text-sm font-semibold uppercase tracking-[0.2em]">Services</p>
+          <h2 className="mt-3 text-3xl font-black text-white">Design and content support for creators.</h2>
           <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {featuredTools.map((tool) => (
-              <ToolCardLink key={tool.slug} tool={tool} />
+            {services.map(([title, text]) => (
+              <article key={title} className="glass-card rounded-[1.5rem] p-6">
+                <h3 className="text-xl font-black text-white">{title}</h3>
+                <p className="mt-3 text-sm leading-6 text-lime-50/75">{text}</p>
+              </article>
             ))}
           </div>
-          <Link
-            to="/tools"
-            className="ghost-button mt-8 inline-flex rounded-full px-5 py-3 font-bold transition"
-          >
-            View all tools
-          </Link>
         </div>
       </section>
 
+      <PortfolioSection />
+
       <section className="px-4 py-14 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-          {[
-            ['No login', 'Use the tools instantly without accounts or signup.'],
-            ['Preset based', 'No fake AI generator. Results come from useful preset arrays and dropdown logic.'],
-            ['Design focused', 'Use free ideas, then order custom thumbnails or social media designs from $2.'],
-          ].map(([title, text]) => (
-            <div key={title} className="glass-card rounded-[1.5rem] p-6">
-              <h3 className="font-black text-white">{title}</h3>
-              <p className="mt-3 text-sm leading-6 text-cyan-50/75">{text}</p>
-            </div>
-          ))}
+        <div className="mx-auto max-w-6xl">
+          <p className="aqua-text text-sm font-semibold uppercase tracking-[0.2em]">Pricing</p>
+          <h2 className="mt-3 text-3xl font-black text-white">Affordable design packages.</h2>
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            {pricing.map(([name, price, features]) => (
+              <article key={name} className="glass-card rounded-[1.5rem] p-6">
+                <h3 className="text-xl font-black text-white">{name}</h3>
+                <p className="aqua-text mt-3 text-4xl font-black">{price}</p>
+                <ul className="mt-5 space-y-3 text-sm text-lime-50/75">
+                  {features.map((feature) => (
+                    <li key={feature}>- {feature}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </>
